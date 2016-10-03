@@ -2,7 +2,7 @@
 
 resultedImage = resizedImage_replication(originalImage, scalingFactor)
 
-輸入originalImage, 輸出resultedImage, 倍率scalingFactor可以大於或小於1
+輸入originalImage, 輸出resultedImage, 倍率scalingFactor可以大於或小於等於1
 
 輸入可以是 2D matrix(灰階) 或是 3D matrix(RGB)
 
@@ -14,4 +14,4 @@ resultedImage = resizedImage_bilinear(originalImage, scalingFactor)
 
 輸入輸出倍率同上
 
-ex: result = resizedImage_replication(Fig0220_a_, 2)
+ex: result = resizedImage_bilinear(Fig0220_a_, 2)
