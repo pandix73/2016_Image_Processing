@@ -17,7 +17,7 @@ end
 
 for i = 1 : h
     for j = 1 : w
-        output(i, j) = T(uint8(input(i, j)+1))-1;
+        output(i, j) = T(1, uint8(input(i, j)+1))-1;
     end
 end
 
