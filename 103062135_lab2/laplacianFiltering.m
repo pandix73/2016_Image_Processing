@@ -4,12 +4,14 @@ tic
 
 input = single(input);
 [h, w] = size(input);
-output = zeros(h, w, 'single');
+output = zeros(h, w, 'uint8');
+% calculate the 2nd order derivative
 scaledLaplacian = spatialFiltering(input, laplacianMask);
 
 for i = 1 : h
     for j = 1 : w
-        output(i, j) = input(i, j) + scale * scaledLaplacian(i, j);
+        % the formula
+        output(i, j) = uint8(input(i, j) + scale * scaledLaplacian(i, j));
     end
 end
 

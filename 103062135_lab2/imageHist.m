@@ -8,6 +8,7 @@ histVector = zeros(1, 256, 'single');
 
 for i = 1 : h
     for j = 1 : w
+        % add it to correspond index
         histVector(1, input(i, j)+1) = histVector(1, input(i, j)+1) + 1;
     end
 end
